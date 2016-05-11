@@ -25,10 +25,10 @@ app.use(function(req, res, next) {
 });
 
 
-io.configure(function () {
+//io.configure(function () {
   io.set("transports", ["xhr-polling"]);
   io.set("polling duration", 10);
-});
+//});
 
 app.get('/', function(req,res){
     res.sendFile(__dirname+'/index.html');
