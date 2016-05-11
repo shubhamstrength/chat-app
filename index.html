@@ -46,7 +46,7 @@
                     <label>Enter Username:</label>
                     <input class="form-control" id="username"/>
                     <br>
-                    <input type="button" onsubmit="defaultCall(e)" class="btn btn-primary" value="Login"  onclick="sendu();"/>
+                    <input type="button" class="btn btn-primary" value="Login"  onclick="sendu();"/>
                 </div>
 
         </div>
@@ -54,7 +54,7 @@
 
     <div id="messageArea" class="row">
         <div class="col-md-4">
-            <div class="well well-sm">
+            <div class="well">
                 <h3>Online users</h3>
                 <ul class="list-group" id="users">
 
@@ -108,7 +108,7 @@
     };
 
     socket.on('new message',function(data){
-        $chat.append('<div class="well">'+'<strong>'+data.user+'</strong>: '+data.msg+'</div>');
+        $chat.append('<div class="well well-sm">'+'<strong>'+data.user+'</strong>: '+data.msg+'</div>');
     });
 
 
