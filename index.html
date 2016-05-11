@@ -25,14 +25,13 @@
     <div id="userFormArea" class="row">
         <div class="col-md-12">
 
-            <form id="userForm">
+
                 <div class="form-group">
                     <label>Enter Username:</label>
                     <input class="form-control" id="username"/>
                     <br>
-                    <input type="button" class="btn btn-primary" value="Login" onclick="sendu();"/>
+                    <input type="button" onsubmit="defaultCall(e)" class="btn btn-primary" value="Login"  onclick="sendu();"/>
                 </div>
-            </form>
 
         </div>
     </div>
@@ -74,7 +73,11 @@
     var $users = $('#users');
     var $username = $('#username');
 
-
+    var defaultCall= function(e){
+        console.log('is called');
+        e.preventDefault();
+        sendu();
+    };
     var sendm=function(){
 
         socket.emit('send message',$message.val());
@@ -85,6 +88,14 @@
     socket.on('new message',function(data){
         $chat.append('<div class="well">'+'<strong>'+data.user+'</strong>: '+data.msg+'</div>');
     });
+
+
+
+    var onsub=function(e){
+
+
+    };
+
 
     var sendu=function(){
 
