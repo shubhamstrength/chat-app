@@ -11,9 +11,9 @@ gulp.task('default', function(){
             "start": "nodemon ./bin/www"
         },
         ext: 'js',
-        env: {
-            PORT:8000
-        },
+        //env: {
+        //    PORT:8000
+        //},
 
         ignore: ['./node_modules/**']
     }).on('restart', function(){
