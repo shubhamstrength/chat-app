@@ -1,1 +1,1 @@
-gulp
+web: gulp
