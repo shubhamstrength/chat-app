@@ -10,10 +10,26 @@
     <style>
         body{
             margin-top:30px;
+            background-image: url('http://i.imgur.com/fvvNDUa.jpg?1');
+            padding: 0;
+
         }
         #messageArea{
             display:none;
+            }
+        #chat{
+            overflow-y: scroll;
+            height:400px;
+
         }
+        .footer{
+            padding-top: 24px;
+
+        }
+        .container{
+            max-width: 1000px;
+        }
+
     </style>
 </head>
 
@@ -38,7 +54,7 @@
 
     <div id="messageArea" class="row">
         <div class="col-md-4">
-            <div class="well">
+            <div class="well well-sm">
                 <h3>Online users</h3>
                 <ul class="list-group" id="users">
 
@@ -58,6 +74,12 @@
                 </form>
 
             </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <p>Made with <span class="glyphicon glyphicon-heart"></span> by Bhuvan</p>
     </div>
 </div>
 
