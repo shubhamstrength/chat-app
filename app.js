@@ -24,10 +24,18 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 app.get('/', function(req,res){
     res.sendFile(__dirname+'/index.html');
    // res.send('hogaya');
 });
+
+
 
 
 io.sockets.on('connection', function(socket){
