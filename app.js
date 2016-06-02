@@ -31,8 +31,8 @@ app.use(function(req, res, next) {
 //});
 
 app.get('/', function(req,res){
-    res.sendFile(__dirname+'/index.html');
-   // res.send('hogaya');
+   // res.sendFile(__dirname+'/index.html');
+   res.send('ESRI chat');
 });
 
 
