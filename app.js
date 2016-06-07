@@ -62,6 +62,15 @@ io.sockets.on('connection', function(socket){
     users.push(socket.username);
     updateUsernames();
   });
+  
+  socket.on('new namespace', function(data,callback){
+    var nsp = io.of(data);
+    nsp.on('connection', function(socket){
+    
+     });
+     io.sockets.emit('send namespace', data);
+     
+  });
 
   function updateUsernames(){
     io.sockets.emit('get users',users);
