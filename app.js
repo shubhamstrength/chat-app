@@ -77,6 +77,7 @@ io.sockets.on('connection', function(socket){
   function updateUsernames(){
     for(var t=0;t<users.length;t++) console.log("line78",users[t]);
     io.sockets.emit('get users',users);
+    io.sockets.emit('get users',connections);
   }
 
 
