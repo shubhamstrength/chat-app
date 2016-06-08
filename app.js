@@ -57,10 +57,12 @@ io.sockets.on('connection', function(socket){
 
 //NEW USER LOGS IN
   socket.on('new user', function(data,callback){
+    console.log(data);
     callback(true);
     socket.username=data;  ///******************** every socket is unique, therefore socket.username is unique
     users.push(socket.username);
     updateUsernames();
+    for(var t=0;t<users.length;t++) console.log(users[t]);
   });
   
 //socket.on('new namespace', function (data, callback) {
